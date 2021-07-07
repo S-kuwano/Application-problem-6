@@ -1,2 +1,3 @@
-<!-- #favorite_area_<%= @book.id %>この部分のHTMLだけ、renderで部分的に更新するという処理 -->
-$("#favorite_area_<%= @book.id %>").html("<%= j(render partial: 'favorites/favorite', locals: { book: @book }) %>");
+  $(".favorite-btn").html("<%= escape_javascript(render partial: 'favorites/favorite-btn', locals: {book: @book}) %>");
+
+  $(".favorite-btn").html("<%= j(render 'favorites/favorite-btn', book: @book) %>");
